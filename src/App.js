@@ -8,25 +8,10 @@ class TwoButtons extends Component {
     this.state = {
       counter: 1
     }
-    this.handleFirstButton = this.handleFirstButton.bind(this)
-    this.handleSecondButton = this.handleSecondButton.bind(this)
-  }
-
-  handleFirstButton() {
-    let newCounter = this.props.firstHandler(this.state.counter)
-    this.setState({ counter: newCounter })
-  }
-  handleSecondButton() {
-    let newCounter = this.props.secondHandler(this.state.counter)
-    this.setState({ counter: newCounter })
+    // (possibly) code needede here
   }
   render() {
-    return (<div>
-      <h1> {this.props.headerText} </h1>
-      <h4> {this.state.counter} </h4>
-      <button onClick={this.handleFirstButton}>{this.props.firstText}</button>
-      <button onClick={this.handleSecondButton}>{this.props.secondText}</button>
-    </div>)
+    // code needed here
   }
 }
 
@@ -63,23 +48,10 @@ class App extends Component {
       />)
     }
     if(this.state.buttonDisplayed === 2) {
-      twoButtons = (<TwoButtons
-        headerText="Multiply by 2 and negate"
-        firstText={"Multiply by 2"}
-        firstHandler={function(cnt) {return cnt * 2}}
-        secondText={"Negate"}  
-        secondHandler={function(cnt) {return -cnt}}
-      
-      />)
+      // code needed here
     }
     if(this.state.buttonDisplayed === 3) {
-      twoButtons = (<TwoButtons
-        headerText="Random and subtract 10"
-        firstText={"Random"}
-        firstHandler={function(cnt) {return Math.floor(Math.random() * 100)}}
-        secondText={"Subtract 10"}  
-        secondHandler={function(cnt) {return cnt - 10}}
-      />)
+      // code needed here
     }
    
     return (
